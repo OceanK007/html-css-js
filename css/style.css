@@ -1,0 +1,72 @@
+.myContainer
+{
+    min-width: 600px;
+    width:80%;
+    margin:auto;
+    background-color:yellow;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+#logo
+{
+    background: url(../img/logo.png) no-repeat;
+    width:120px;
+    height:44px;
+    text-indent: -9999px; /* What's the use if no image? */
+}
+
+.nav
+{
+    background-color:rgb(227, 231, 227);
+    overflow:hidden;
+}
+.nav ul
+{
+    padding:0px;
+}
+.nav ul li
+{
+    display:inline;
+    padding-right:10px;
+}
+.nav li a
+{
+    text-decoration: none;
+    color: cadetblue;
+}
+.nav li a:hover
+{
+    text-decoration: underline;
+    color:darkcyan;
+    font-size: 15px;
+}
+
+.content, aside
+{
+    height:600px;
+}
+.content
+{
+    background-color: red;
+    width:80%;
+    float:left;
+}
+
+aside
+{
+    min-width:100px;
+    width:10%;
+    background-color: brown;
+    float:left;   
+}
+aside ul
+{
+    list-style: none;
+    padding-left: 0px;
+}
+
+aside ul li
+{
+    padding-bottom: 8px;
+}

@@ -1,0 +1,48 @@
+body
+{
+    margin:0px;
+    overflow:hidden;
+}
+
+header
+{
+    background-color:#E0E0E2;
+    height: 10vh;
+}
+
+nav
+{
+    background-color:#81D2C7;
+    height: 5vh;
+}
+
+aside
+{
+    background-color:#B5BAD0;
+    height:70vh;
+    width:20%;
+    float:left;
+}
+
+main
+{
+    background-color:#7389AE;
+    height:70vh;
+    width:60%;
+    float:left;
+}
+
+section
+{
+    background-color:#416788;
+    float:left;
+    height:70vh;
+    width:20%;
+}   
+
+footer
+{
+    clear:both;
+    background-color:#E0E0E2;
+    height: 15vh;
+}
