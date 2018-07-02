@@ -1,0 +1,30 @@
+body
+{
+    margin:0px;
+    background-color: #D7FDEC;
+}
+
+.container
+{
+    display:flex;
+    flex-direction: column;
+    overflow:hidden;
+}
+
+header
+{
+    background-color: #A9FBD7;
+    height:10vh;
+}
+
+nav
+{
+    background-color:#81D2C7;
+    height:5vh;
+}
+
+footer
+{
+    background-color:#A9FBD7;
+    height:10vh;
+}
