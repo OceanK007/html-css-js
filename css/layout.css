@@ -219,5 +219,45 @@ nav li a
 #section-products
 {
     background-color:#81D2C7;
-    height:300px;
+    height:260px;
+    border:2px solid lightgreen;
+    display:inline-flex;
+    overflow-x:auto;
+    overflow-y:hidden;
+}
+
+.product
+{
+    width: 290px;
+    height: 230px;
+    margin: 3px;
+    border:2px solid darkgrey;
+    text-align:center;
+}
+
+.product p
+{
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.product img
+{
+    width:280px;
+    height:182px;
+    margin-top:3px;
+    border:2px solid lightgrey;
+}
+
+.productName
+{
+    float:left;
+    margin-left:5px;
+}
+
+.productPrice
+{
+    float:right;
+    margin-right:5px;
 }
