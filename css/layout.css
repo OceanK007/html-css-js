@@ -7,6 +7,10 @@
     flex-direction:column;
 }
 
+#logo h5, #content h5, #section-hero h5, #section-purchase h5, #purchase-col1 h5, #purchase-col2 h5, .pur-sec h5, #section-products h5
+{
+    display:none;
+}
 /* Header section starts */
 #header
 {

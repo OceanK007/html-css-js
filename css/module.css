@@ -1,5 +1,16 @@
 @media only screen and (max-width: 600px) 
 {
+    #header
+    {
+        flex-direction:column;
+    }
+
+    #logotext
+    {
+        width:145px;
+        margin:0 auto;
+    }
+
     #section-purchase
     {
         flex-direction:column;
@@ -12,7 +23,11 @@
 
     #nav
     {
-        justify-content: flex-start;
+        justify-content: center;
+    }
+    #nav ul
+    {
+        padding:0px;
     }
     #nav li
     {
