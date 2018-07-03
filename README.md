@@ -1,1 +1,5 @@
-Project describing the use of HTML, CSS, JS, Jquery
+Assignment 1:: Create a responsive webpage using:
+
+HTML
+CSS
+FlexBox
