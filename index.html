@@ -1,52 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>HTML | CSS | JS</title>
-        <link rel="icon" href="img/html5.ico" />
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script type="text/javascript" src="js/script.js"></script>
-    </head>
-    <body>
-        <div class="container">
-            <header id="header">
-                <section class="logo">
-                    Gamers Point
-                </section>
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Games</a></li>
-                        <li><a href="#">Purchase</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <section id="content">
-                    <section id="section-hero">
-                        <div>
-                            <img src="./img/heroimage.jpg" alt="Hero image">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gamer League</title>
+    <link rel="icon" href="img/html5.ico" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header id="header">
+            <section id="logo">
+                <div id="logotext">
+                    Gamers League
+                </div>
+            </section>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">Purchase</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="content">
+            <section id="section-hero">
+                <div>
+                    <img src="./img/heroimage.jpg" alt="Hero image">
+                </div>
+            </section>
+            <section id="section-purchase">
+                <section id="purchase-col1">
+                    <article class="gameofyear">
+                        <div class="gof-image">
+                            <a href="#">
+                                <img src="img/gameofyear.jpg" alt="game of year" />
+                            </a>
                         </div>
-                    </section>
-                    <section id="section-purchase">
-                        <section id="purchase-col1">
-                            <article class="gameofyear">
-                                <a href="#">
-                                    <img src="img/gameofyear.jpg" alt="game of year" />
-                                </a>
-                                <div class="gof-description">
+                        <div class="gof-description">
+                            <ul class="meta">
+                                <li><a href="#">Check compatability</a></li>
+                                <li><a href="#">Purchase</a></li>
+                            </ul>
+                            <h2 class="fit-element">Dead Space 3</h2>
+                            <p class="post_info fit-element">Released on 17th August 2018 with <a href="#">33 comments</a></p>
+                            <div class="body fit-element">
+                                <p>
+                                    simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...
+                                </p>
+                            </div>
+
+                            <a class="continue" href="#">Continue</a>
+                        </div>
+                    </article>
+                </section>
+                <section id="purchase-col2">
+                    <div id="preview-list">
+                        <section class="pur-sec">
+                            <article>
+                                <div class="preview-image">
+                                    <a href="#">
+                                        <img src="img/top1.PNG" alt="top1" />
+                                    </a>
+                                </div>
+                                <div class="preview">
                                     <ul class="meta">
                                         <li><a href="#">Check compatability</a></li>
                                         <li><a href="#">Purchase</a></li>
                                     </ul>
-                                    <h2>Dead Space 3</h2>
-                                    <p class="post_info">Released on 17th August 2018 with <a href="#">33 comments</a></p>
+                                    <h3 class="fit-element">Call Of Duty</h3>
+                                    <p class="post_info fit-element">Released on 17th August 2018 with <a href="#">33 comments</a></p>
                                     <div class="body">
                                         <p>
-                                            simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...
+                                            simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer ...
                                         </p>
                                     </div>
 
@@ -54,117 +83,150 @@
                                 </div>
                             </article>
                         </section>
-                        <section id="purchase-col2">
-                            <section class="pur-sec">
-                                <article>
+                        <section class="pur-sec">
+                            <article>
+                                <div class="preview-image">
                                     <a href="#">
-                                        <img src="img/top1.PNG" alt="top1" />
+                                        <img src="img/top2.PNG" alt="top1" />
                                     </a>
-                                    <div class="preview">
-                                        <ul class="meta">
-                                            <li><a href="#">Check compatability</a></li>
-                                            <li><a href="#">Purchase</a></li>
-                                        </ul>
-                                        <h3>Call Of Duty</h3>
-                                        <p class="post_info">Released on 17th August 2018 with <a href="#">33 comments</a></p>
-                                        <div class="body">
-                                            <p>
-                                                simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...
-                                            </p>
-                                        </div>
-
-                                        <a class="continue" href="#">Continue</a>
+                                </div>
+                                <div class="preview">
+                                    <ul class="meta">
+                                        <li><a href="#">Check compatability</a></li>
+                                        <li><a href="#">Purchase</a></li>
+                                    </ul>
+                                    <h3 class="fit-element">Assassin Creed</h3>
+                                    <p class="post_info fit-element">Released on 17th August 2018 with <a href="#">33 comments</a></p>
+                                    <div class="body">
+                                        <p>
+                                            simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer ...
+                                        </p>
                                     </div>
-                                </article>    
-                            </section>
-                            <section class="pur-sec">
-                                <article>
-                                    <a href="#">
-                                        <img src="img/top2.PNG" alt="top2" />
-                                    </a>
-                                    <div class="preview">
-                                        <ul class="meta">
-                                            <li><a href="#">Check compatability</a></li>
-                                            <li><a href="#">Purchase</a></li>
-                                        </ul>
-                                        <h3>Assassin Creed</h3>
-                                        <p class="post_info">Released on 17th August 2018 with <a href="#">33 comments</a></p>
-                                        <div class="body">
-                                            <p>
-                                                simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...
-                                            </p>
-                                        </div>
 
-                                        <a class="continue" href="#">Continue</a>
-                                    </div>
-                                </article> 
-                            </section>
-                            <section class="pur-sec">
-                                <article>
-                                    <a href="#">
-                                        <img src="img/top3.PNG" alt="top3" />
-                                    </a>
-                                    <div class="preview">
-                                        <ul class="meta">
-                                            <li><a href="#">Check compatability</a></li>
-                                            <li><a href="#">Purchase</a></li>
-                                        </ul>
-                                        <h3>Mass Effect 3</h3>
-                                        <p class="post_info">Released on 17th August 2018 with <a href="#">33 comments</a></p>
-                                        <div class="body">
-                                            <p>
-                                                simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...
-                                            </p>
-                                        </div>
-
-                                        <a class="continue" href="#">Continue</a>
-                                    </div>
-                                </article> 
-                            </section>
+                                    <a class="continue" href="#">Continue</a>
+                                </div>
+                            </article>
                         </section>
-                    </section>
-                    <section id="section-products">
-                        <div class="product">
-                            <a href="#">
-                                <img src="img/purchase_crysis.PNG" alt="Crysis" />
-                            </a>
-                            <p>
-                                <span class="productName">Crisis 3</span>
-                                <span class="productPrice">Price: $250</span>
-                            </p>
-                        </div>
-                        <div class="product">
-                            <a href="#">
-                                <img src="img/purchase_crysis.PNG" alt="Crysis" />
-                            </a>
-                            <p>
-                                <span class="productName">Crisis 3</span>
-                                <span class="productPrice">Price: $250</span>
-                            </p>
-                        </div>
-                        <div class="product">
-                            <a href="#">
-                                <img src="img/purchase_crysis.PNG" alt="Crysis" />
-                            </a>
-                            <p>
-                                <span class="productName">Crisis 3</span>
-                                <span class="productPrice">Price: $250</span>
-                            </p>
-                        </div>
-                        <div class="product">
-                            <a href="#">
-                                <img src="img/purchase_crysis.PNG" alt="Crysis" />
-                            </a>
-                            <p>
-                                <span class="productName">Crisis 3</span>
-                                <span class="productPrice">Price: $250</span>
-                            </p>
-                        </div>
-                    </section>
+                        <section class="pur-sec">
+                            <article>
+                                <div class="preview-image">
+                                    <a href="#">
+                                        <img src="img/top3.PNG" alt="top1" />
+                                    </a>
+                                </div>
+                                <div class="preview">
+                                    <ul class="meta">
+                                        <li><a href="#">Check compatability</a></li>
+                                        <li><a href="#">Purchase</a></li>
+                                    </ul>
+                                    <h3 class="fit-element">Mass Effect 3</h3>
+                                    <p class="post_info fit-element">Released on 17th August 2018 with <a href="#">33 comments</a></p>
+                                    <div class="body">
+                                        <p>
+                                            simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer ...
+                                        </p>
+                                    </div>
+
+                                    <a class="continue" href="#">Continue</a>
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+                </section>
             </section>
-            <footer id="footer">
-                Footer
-            </footer>
-        </div>
-    </body>
+            <section id="section-products">
+                <div class="product-scroll">
+                    <div class="product-bar">
+                        <div class="product">
+                            <div>
+                                <a href="#">
+                                    <img src="img/purchase_crysis.PNG" alt="Crysis" />
+                                </a>
+                            </div>
+                            <div class="product-meta">
+                                <span class="productName">Crisis 3</span>
+                                <span class="productPrice">Price: $250</span>
+                            </div>
+                        </div>
+
+                        <div class="product">
+                            <div>
+                                <a href="#">
+                                    <img src="img/purchase_blackops.PNG" alt="Crysis" />
+                                </a>
+                            </div>
+                            <div class="product-meta">
+                                <span class="productName">Black OPS</span>
+                                <span class="productPrice">Price: $350</span>
+                            </div>
+                        </div>
+
+                        <div class="product">
+                            <div>
+                                <a href="#">
+                                    <img src="img/purchase_deltasquad.PNG" alt="Crysis" />
+                                </a>
+                            </div>
+                            <div class="product-meta">
+                                <span class="productName">Delta Squad</span>
+                                <span class="productPrice">Price: $200</span>
+                            </div>
+                        </div>
+
+                        <div class="product">
+                            <div>
+                                <a href="#">
+                                    <img src="img/purchase_dishonored.PNG" alt="Crysis" />
+                                </a>
+                            </div>
+                            <div class="product-meta">
+                                <span class="productName">Dishonored</span>
+                                <span class="productPrice">Price: $330</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div>
+                                <a href="#">
+                                    <img src="img/purchase_kyrim.PNG" alt="Crysis" />
+                                </a>
+                            </div>
+                            <div class="product-meta">
+                                <span class="productName">Kyrim</span>
+                                <span class="productPrice">Price: $450</span>
+                            </div>
+                        </div>
+
+                        <div class="product">
+                            <div>
+                                <a href="#">
+                                    <img src="img/purchase_transformer.PNG" alt="Crysis" />
+                                </a>
+                            </div>
+                            <div class="product-meta">
+                                <span class="productName">Transformer</span>
+                                <span class="productPrice">Price: $250</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <footer id="footer">
+            <div>
+                <div class="copyright">
+                    <p>© 2018 Gamers League.</p>
+                </div>
+                <div class="links">
+                    <ul class="social-links">
+                        <li><a target="_blank" href="http://twitter.com/sharethis"><img src="./img/social-icons/twitter.PNG" alt="twitter"/> </a></li> 							 
+                        <li><a target="_blank" href="http://facebook.com/sharethis"><img src="./img/social-icons/facebook.PNG" alt="facebook"/> </a></li>
+                        <li><a target="_blank" href="http://linkedin.com/company/sharethis"><img src="./img/social-icons/linkedin.PNG" alt="linkedin"/> </a></li>
+                        <li><a target="_blank" href="http://youtube.com/user/sharethis"><img src="./img/social-icons/youtube.PNG" alt="youtube"/> </a></li>
+                        <li><a target="_blank" href="http://instagram.com/sharethis"><img src="./img/social-icons/instagram.PNG" alt="instagram"/></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
 </html>

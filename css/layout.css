@@ -1,63 +1,80 @@
 .container
 {
     width:960px;
-    margin:auto;
+    margin: auto;
+    background-color:#e6e6e6;
     display:flex;
-    flex-direction: column;
+    flex-direction:column;
 }
 
+/* Header section starts */
 #header
 {
-    display: flex;
-    align-items:center;
-    text-align: center;
+    display:flex;
+    flex-direction:row;
+    position:fixed;
+    width:inherit;
+    top:0;
+    border-bottom:1px solid teal;
 }
 
-.logo
+#logo
+{
+    background-color:white;
+    flex:1;
+    border:1px solid #D3FAD6;
+    border-bottom:none;
+}
+
+#logotext
 {
     background: url(../img/logo.png) no-repeat;
-    text-indent: -9999px;
     height:88px;
-    flex-basis:15%;
+    text-indent: -9999px;
 }
 
-nav
+#nav
 {
-    flex-basis:90%;
-    text-align:right;
+    background-color:white;
+    flex:7;
     align-self: stretch;
     display:flex;
     align-items:center;
     justify-content: flex-end;
 }
 
-nav ul
+#nav li
 {
-    
+    display:inline;
+    padding-right:25px;
 }
 
-nav li 
-{
-    display: inline;
-    padding-right:20px;
-}
-
-nav li a
+#nav li a
 {
     text-decoration: none;
+    color: cadetblue;
+    font-weight: bold;
+    text-shadow: 1px -1px 3px #000000;
 }
+
+#nav li a:hover
+{
+    color:darkcyan;
+    font-size: 15px;
+}
+
+/* Header section ends */
+
 
 #content
 {
-    background-color: red;
-    display:flex;
-    flex-direction: column;
+    margin-top:91px;
 }
 
+/* Hero section starts */
 #section-hero
 {
-    background-color: #B2E4DB;
-    height:539px;
+    background-color:#bfbfbf;
 }
 
 #section-hero img
@@ -68,88 +85,55 @@ nav li a
 #section-purchase
 {
     display:flex;
-    height:600px;
 }
 
+/* Hero section ends */
+
+/* Section purchase : col1 starts */
 #purchase-col1
 {
-    background-color:#B0C6CE;
-    flex-basis:50%;
+    background-color:#f5eeee;
+    border:1px solid darkkhaki;
+    flex:6;
 }
 
-.gameofyear
+.gof-image
 {
+    text-align:center;
+    border-bottom:1px solid lightgreen
+}
+
+.gof-image img
+{
+    margin-top:10px;
+    margin-bottom:10px;
     padding:2px;
-    border:3px solid lightgrey;
-    height:590px;
-}
-
-.gameofyear h2
-{
-    margin-top:0px;
-    margin-bottom:0px;
-}
-
-.gameofyear img
-{
-    width:470px;
-    height:393px;
-}
-
-#purchase-col2
-{
-    display:flex;
-    flex-direction: column;
-    background-color: #938BA1;
-    flex-basis:50%;
-}
-
-#purchase-col2 section
-{
-    height:195px;
-}
-
-.pur-sec
-{
-    background-color: #DCE1DE;
-    margin:2px auto;
-    margin-bottom:0px;
-    border:1px solid lightcyan;
-}
-
-.pur-sec article h3
-{
-    margin-top:0;
-    margin-bottom:0px;
-}
-
-.pur-sec article img
-{
-    width:130px;
-    height:140px;
-    float:left;
-    margin:2px 10px 2px 2px;
-}
-
-.preview
-{
-    float:right;
-    width:333px;
-}
-
-.preview a
-{
-    color: #276056;
+    border:1px solid lightslategray;
 }
 
 .meta
 {
-    padding-left:0px;
-    margin-top:0px;
+    padding-left:5px;
+    margin-top:5px;
     margin-bottom:5px;
 }
+.meta li
+{
+    display:inline;
+ 
+}
 
-.meta a, .post_info 
+.gof-description a
+{
+    color: #276056;
+}
+
+.meta li a, .post_info a
+{
+    text-decoration: none;
+}
+
+.meta a, .post_info, .continue
 {
     font-style:italic;
     font-size:13px;
@@ -158,7 +142,7 @@ nav li a
 .meta li:after
 {
     content: "\\";
-    padding: 0 2px;
+    padding: 0 5px;
     color:#999;
 }
 
@@ -167,30 +151,11 @@ nav li a
     content:none;
 } 
 
-.meta li
+.fit-element
 {
-    display:inline;
-}
-
-.post_info
-{
-    color:#999;
-    background:#f3f3f3;
-    padding:0px 3px 0px 0px;
     margin-top:0px;
-    margin-bottom:3px;
-    float:left;
-}
-
-.post_info a
-{
-    color:#999;
-    text-decoration: none;
-}
-
-.post_info a:hover
-{
-    color:black;
+    margin-bottom:0px;
+    padding-left:5px;
 }
 
 .body
@@ -204,6 +169,7 @@ nav li a
     font-size:13px;
     float:right;
     padding-right:10px;
+    padding-bottom:10px;
 }
 
 .continue:before
@@ -215,31 +181,77 @@ nav li a
 {
     content:")"
 }
+/* Section purchase : col1 ends */
 
+/* Section purchase : col2 starts */
+#purchase-col2
+{
+    background-color: #f5eeee;
+    border:1px solid darkkhaki;
+    flex:5;
+}
+
+#preview-list
+{
+    display:flex;
+    flex-direction:column;
+}
+
+.pur-sec
+{
+    border-bottom:1px solid black;
+}
+
+#preview-list section:last-child
+{
+    border-bottom:none;
+}
+
+.preview-image
+{
+    /* border:1px solid lightgreen; */
+    width:135px;
+    float:left;
+    margin-left:5px;
+}
+
+.preview-image img
+{
+    width:130px;
+    height:140px;
+    margin-top:8px;
+    margin-bottom:10px;
+    padding:2px;
+    border:1px solid lightslategray;
+}
+
+.preview
+{
+    float:left;
+    width:284px;
+    margin-left:5px;
+}
+
+.preview a
+{
+    color: #276056;
+}
+/* Section purchase : col2 end */
+
+/* Production section starts */
 #section-products
 {
-    background-color:#81D2C7;
-    height:260px;
-    border:2px solid lightgreen;
-    display:inline-flex;
-    overflow-x:auto;
-    overflow-y:hidden;
+    /* background-color: #999999; */
+    border:2px solid lightgrey;
 }
 
 .product
 {
     width: 290px;
-    height: 230px;
     margin: 3px;
-    border:2px solid darkgrey;
+    border:2px solid white;
     text-align:center;
-}
-
-.product p
-{
-    font-size: 17px;
-    font-weight: bold;
-    margin-top: 5px;
+    float:left;
 }
 
 .product img
@@ -261,3 +273,51 @@ nav li a
     float:right;
     margin-right:5px;
 }
+
+.product-meta
+{
+    height:25px;
+}
+
+.product-scroll
+{
+    overflow-x:auto;
+    overflow-y:hidden;
+}
+
+.product-bar
+{
+    width:3000px;
+}
+/* Production section ends */
+
+/* Footer section starts */
+#footer
+{
+    background-color: darkgray;
+}
+
+.social-links li
+{
+    display:inline;
+}
+
+.social-links li a
+{
+    text-decoration: none;
+}
+
+.copyright
+{
+    float:left;
+    color:darkslategray;
+    margin:10px 0px 0px 10px;
+}
+
+.links
+{
+    float:right;
+    margin-right:10px;
+}
+
+/* Footer section ends */

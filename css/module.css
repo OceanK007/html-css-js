@@ -1,0 +1,28 @@
+@media only screen and (max-width: 600px) 
+{
+    #section-purchase
+    {
+        flex-direction:column;
+    }
+
+    #preview-list
+    {
+        flex-direction:column;
+    }
+
+    #nav
+    {
+        justify-content: flex-start;
+    }
+    #nav li
+    {
+        display:list-item;
+        padding-right:0px;
+        list-style: none;
+    }
+
+    #content
+    {
+        margin-top:129px;
+    }
+} 
