@@ -1,0 +1,275 @@
+body
+{
+    background-color: #F0FFFF;
+    margin:0px;
+    padding:0px;
+}
+
+header div
+{
+    width:100px;
+    text-align:center;
+    margin:0px auto;
+}
+.container
+{
+    width:960px;
+    margin: 0px auto;
+    background-color: #ffffe6;
+}   
+
+.title
+{
+    text-align:center;
+}
+.parent
+{
+    border:5px solid rebeccapurple;
+    display:flex;
+}
+
+.box
+{
+    background-color:skyblue;
+    margin:5px;
+    width:50px;
+    height:50px;
+    text-align:center;
+    /* line-height:50px; */
+}
+
+
+/* section2 */
+.parent2
+{
+    flex-direction:row-reverse;
+}
+
+/* Section3 */
+.parent3
+{
+    flex-direction:column;
+}
+
+/* Section4 */
+.parent4
+{
+    /* flex-wrap: nowrap  */
+    flex-wrap: wrap;
+}
+.parent4 div
+{
+    width:200px;
+}
+
+/* Section5 */
+.parent5
+{
+    /* justify-content: flex-start; */
+    justify-content:flex-end;
+}
+
+/* Section6 */
+.parent6
+{
+    justify-content: space-between;
+}
+
+/* Section7 */
+.parent7
+{
+    align-items:center;
+    height:200px;
+}
+
+/* Section8 */
+.parent8
+{
+    height:200px;
+    align-items:stretch;
+}
+
+/* Section9 */
+.parent9
+{
+    height:200px;
+    align-items:baseline;
+}
+
+.parent9 div:nth-child(3)
+{
+    font-size: 70px;
+}
+
+/* Section10 */
+.parent10
+{
+    height:200px;
+    flex-wrap:wrap;
+    align-content: center;
+}
+
+.parent10 div
+{
+    width:200px;
+}
+
+/* Section11 */
+.parent11
+{
+    height:200px;
+    flex-wrap:wrap;
+    align-content: space-between;
+}
+
+.parent11 div
+{
+    width:200px;
+}
+
+/* Section12 */
+.parent12
+{
+    height:200px;
+    flex-wrap:wrap;
+    align-content: space-between;
+    flex-direction: column;
+}
+
+.parent12 div
+{
+    width:200px;
+}
+
+/* Section13 */
+.parent13 div:nth-child(5)
+{
+    order:1;
+}
+.parent13 div:nth-child(4)
+{
+    order:2;
+}
+.parent13 div:nth-child(3)
+{
+    order:3;
+}
+.parent13 div:nth-child(2)
+{
+    order:4;
+}
+.parent13 div:nth-child(1)
+{
+    order:5;
+}
+
+/* Section14 */
+.parent14 div:nth-child(2)
+{
+    flex-grow: 3;
+}
+
+.parent14 div:nth-child(3)
+{
+    flex-grow: 2;
+}
+
+/* Section15 */
+.parent15 div
+{
+    width:300px;
+}
+
+.parent15 div:nth-child(2)
+{
+    flex-shrink: 3;
+}
+
+.parent15 div:nth-child(3)
+{
+    flex-shrink: 2;
+}
+
+/* Section 16 */
+.parent16 div
+{
+    width:300px;
+}
+
+.parent16 div:nth-child(2)
+{
+    flex-basis: 60px;
+}
+
+.parent16 div:nth-child(3)
+{
+    flex-basis: 30px;
+}
+
+/* Section 17 */
+.parent17
+{
+    flex-direction: column;
+}
+
+.parent17 div
+{
+    width:300px;
+}
+
+.parent17 div:nth-child(2)
+{
+    flex-basis: 40px;
+}
+
+.parent17 div:nth-child(3)
+{
+    flex-basis: 20px;
+}
+
+/* Section 18 */
+.parent18 div:nth-child(2)
+{
+    flex: 2;
+}
+
+.parent18 div:nth-child(3)
+{
+    flex: 1;
+}
+/*** Basic values ***/
+/* flex: auto;
+flex: initial;
+flex: none;
+flex: 2; */
+
+/* One value, unitless number: flex-grow */
+/* flex: 2; */
+
+/* One value, width/height: flex-basis */
+/* flex: 10em;
+flex: 30px; */
+
+/* Two values: flex-grow | flex-basis */
+/* flex: 1 30px; */
+
+/* Two values: flex-grow | flex-shrink */
+/* flex: 2 2; */
+
+/* Three values: flex-grow | flex-shrink | flex-basis */
+/* flex: 2 2 10%; */
+
+/* Global values */
+/* flex: inherit;
+flex: initial;
+flex: unset; */
+
+/* Section 19 */
+.parent19
+{
+    height:300px;
+}
+.parent19 div:nth-child(2)
+{
+    align-self:flex-end;
+}
