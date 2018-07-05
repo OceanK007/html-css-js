@@ -1,1 +1,4 @@
-Project describing the use of HTML, CSS, JS, Jquery
+We are creating 3 responsive full website using bootstrap.
+
+1. index.html
+2. band.html
