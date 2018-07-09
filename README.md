@@ -5,20 +5,39 @@ We are creating 3 responsive full website using bootstrap.
 3. startup.html
 
 -----------------------------------------------------------
+* To init npm 
+* npm init                          
+// It will ask for project name and will create package.json
+// If you want current folder name as project name, just press enter.
 
-* To install sass:
+* To update npm version
+npm install npm@latest -g
+npm i -g npm
 
-1. Go to https://sass-lang.com/install
-2. Click git link : https://github.com/sass/dart-sass/releases/tag/1.9.0
-3. Download required file
-4. Extract file to a particular destination.
-5. Add "D:\Ocean\dart-sass" in environment variable.
+* To install bootstrap via npm:
+npm install bootstrap --save        // --save: To save in dependencies property
+npm install bootstrap --save-dev    // --save-dev: To save in dev-dependencies
 
------------------------------------------------------------
+* To install jQuery via npm:
+npm install jquery --save
 
-* To check if sass installed or not:
+* To install popper via npm:
+npm install popper.js --save
 
-Open command prompt and type "sass --version"
+* To install all 3 above using one command:
+npm install bootstrap jquery popper.js --save
+
+* To install gulp globally (Wont' be saved in package.json):
+npm install -g gulp          // -g is for global
+
+* To install sass globally (Wont' be saved in package.json):
+npm install -g sass         // -g is for global
+
+* To install gulp-sass:
+npm install gulp-sass --save
+
+* To install browser-sync:
+npm install browser-sync --save
 
 -----------------------------------------------------------
 

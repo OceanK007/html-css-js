@@ -1,0 +1,26 @@
+{
+  "name": "html-css",
+  "version": "1.0.0",
+  "description": "We are creating 3 responsive full website using bootstrap.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OceanK007/html-css-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OceanK007/html-css-js/issues"
+  },
+  "homepage": "https://github.com/OceanK007/html-css-js#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "browser-sync": "^2.24.5",
+    "gulp-sass": "^4.0.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  }
+}
