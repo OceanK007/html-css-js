@@ -35,3 +35,12 @@ sass --watch sourceFolder/sassFolder:targetFolder/cssFolder
 
 // To convert particular path file.scss to specific path with specific name newFileName.css
 sass --watch sourceFolder/sourceFilename.scss:targetFolder/targetFilename.css	
+
+-----------------------------------------------------------
+
+* Commands used to convert .scss to .css
+
+1. sass --watch scss/style.scss:css/style.css
+2. sass --watch scss/startup.scss:css/startup.css
+3. sass --watch scss/band.scss:css/band.css
+
