@@ -1,13 +1,6 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('Browser-sync');
-var http = require('http');
-
-var server = http.createServer(function(request,response)
-{
-
-});
-server.listen(8080);
 
 // *** Command to convert .scss to .css file *** //
 // To add all .scss file: src/scss/*.scss
