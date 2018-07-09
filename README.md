@@ -5,6 +5,22 @@ We are creating 3 responsive full website using bootstrap.
 3. startup.html
 
 -----------------------------------------------------------
+
+We have used:
+
+1. html
+2. css
+3. bootstrap 4.1
+4. gulp
+5. node JS
+6. popper
+7. jQuery
+
+-----------------------------------------------------------
+
+Motive: We are using gulp command to automatically convert .scss to .css file
+
+-----------------------------------------------------------
 * To init npm 
 * npm init                          
 // It will ask for project name and will create package.json
@@ -13,6 +29,9 @@ We are creating 3 responsive full website using bootstrap.
 * To update npm version
 npm install npm@latest -g
 npm i -g npm
+
+* To reinstall all dependencies defined in package.json
+npm install
 
 * To install bootstrap via npm:
 npm install bootstrap --save        // --save: To save in dependencies property
@@ -54,3 +73,12 @@ sass --watch sourceFolder/sassFolder:targetFolder/cssFolder
 
 // To convert particular path file.scss to specific path with specific name newFileName.css
 sass --watch sourceFolder/sourceFilename.scss:targetFolder/targetFilename.css	
+
+-----------------------------------------------------------
+
+* To run project:
+
+Go to root folder (containing gulpfile.js), open cmd and type "gulp"
+
+- It will start listening to port
+

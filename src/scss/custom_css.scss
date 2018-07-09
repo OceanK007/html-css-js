@@ -1,0 +1,46 @@
+// add your custom styles here
+// to learn more about SASS, visit sass-lang.com
+html, body {
+    height: 100%;
+    /* Default font size is 16px */
+    /* font-size:16px; */
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  #cover {
+    background: #222 url("../img/stars.jpg") center center no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .section-content {
+    /* padding:80px 0; */
+    /* 1rem = 16px (font size of page. Default font size is 16px) */
+    padding: 5rem 0;
+  }
+  
+  #about {
+    background: url("../img/girlincar.jpg") center center no-repeat;
+    background-size: cover;
+  }
+  
+  .about-text {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1.875rem;
+  }
+  
+  #footer-main {
+    background: #222;
+    color: white;
+    font-size: 0.8rem;
+    padding: 2.5rem 0;
+  }
