@@ -60,7 +60,7 @@ npm install browser-sync --save
 
 -----------------------------------------------------------
 
-* Sass commands:
+* Sass commands (Don't use these --watch commands here since gulp is taking care of things):
 
 // To check version
 sass --version	

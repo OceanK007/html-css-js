@@ -11,9 +11,11 @@ server.listen(8080);
 
 // *** Command to convert .scss to .css file *** //
 // To add all .scss file: src/scss/*.scss
+
+// .src(['node_modules/bootstrap/scss/bootstrap', 'src/scss/*.scss'])
 gulp.task('sass', () => {
     return gulp 
-            .src(['node_modules/bootstrap/scss/bootstrap', 'src/scss/style.scss'])
+            .src('src/scss/*.scss')
             .pipe(sass())
             .pipe(gulp.dest('src/css'))
             .pipe(browserSync.stream());
@@ -31,7 +33,7 @@ gulp.task('js', () => {
 gulp.task('serve', ['sass'], () => {
     browserSync.init
     ({
-        server:'src/*',
+        server:'./src',
         port: 8080
     });
     gulp.watch(['src/scss/*.scss'], ['sass']);
