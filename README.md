@@ -1,9 +1,10 @@
-We are creating 3 responsive full website using bootstrap.
+Webpage creation using:
 
-1. index.html
-2. band.html
-3. startup.html
-
+HTML
+CSS
+Bootstrap
+SASS
+GULP
 -----------------------------------------------------------
 
 We have used:
@@ -60,7 +61,7 @@ npm install browser-sync --save
 
 -----------------------------------------------------------
 
-* Sass commands (Don't use these --watch commands here since gulp is taking care of things):
+* Sass commands:
 
 // To check version
 sass --version	

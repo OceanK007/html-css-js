@@ -4,8 +4,7 @@ const browserSync = require('Browser-sync');
 
 // *** Command to convert .scss to .css file *** //
 // To add all .scss file: src/scss/*.scss
-
-// .src(['node_modules/bootstrap/scss/bootstrap', 'src/scss/*.scss'])
+// .src(['node_modules/bootstrap/scss/bootstrap', 'src/scss/style.scss'])
 gulp.task('sass', () => {
     return gulp 
             .src('src/scss/*.scss')

@@ -1,21 +1,21 @@
 {
-  "name": "html-css",
+  "name": "html-css-bootstrap-assignment1",
   "version": "1.0.0",
-  "description": "We are creating 3 responsive full website using bootstrap.",
-  "main": "index.js",
+  "description": "Webpage creation using:",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OceanK007/html-css-js.git"
+    "url": "git+https://github.com/OceanK007/html-css-bootstrap-assignment1.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/OceanK007/html-css-js/issues"
+    "url": "https://github.com/OceanK007/html-css-bootstrap-assignment1/issues"
   },
-  "homepage": "https://github.com/OceanK007/html-css-js#readme",
+  "homepage": "https://github.com/OceanK007/html-css-bootstrap-assignment1#readme",
   "dependencies": {
     "bootstrap": "^4.1.1",
     "browser-sync": "^2.24.5",
