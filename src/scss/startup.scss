@@ -1,6 +1,8 @@
-@import "../../node_modules/bootstrap/scss/bootstrap";
+// Variables which needs to be overridden must define before bootstrap.scss import
+// And must not define !default keyword with it.
+// !default : It means if no value assigned before then use this default value.
 
-// Modify _variable.scss value here
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 // add your custom styles here
 html, body {
