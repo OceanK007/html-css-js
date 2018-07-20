@@ -1,1 +1,5 @@
-Project describing the use of HTML, CSS, JS, Jquery
+Doing DOM manipulation using javascript: Drag and drop
+
+# To run:
+
+Go to root and type: gulp

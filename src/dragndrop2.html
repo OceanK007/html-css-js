@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+        <style>
+            #container {
+                margin: auto;
+                top: 100px;
+                width: 100%;
+                background-color:#2e90f8;
+            }
+
+            .holder {
+                height: 400px;
+                width: 300px;
+                margin: 10px;
+                border: solid 1px black;
+                background-color:#d6dadc;
+                display: inline-block;
+            }
+
+            .box {
+                height: 30px;
+                width: 290px;
+                background-color:white;
+                cursor: pointer;
+                margin:5px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="container">
+            <div class="holder">
+                <div class="box" draggable="true">1</div>
+                <div class="box" draggable="true">2</div>
+                <div class="box" draggable="true">3</div>
+                <div class="box" draggable="true">4</div>
+                <div class="box" draggable="true">5</div>
+                <div class="box" draggable="true">6</div>
+                <div class="box" draggable="true">7</div>
+                <div class="box" draggable="true">8</div>
+                <div class="box" draggable="true">9</div>
+            </div>
+        
+            <div class="holder">
+                
+            </div>
+
+            <div class="holder">
+                
+            </div>
+            </div>
+        </div>
+
+        <script>
+           class App 
+           {
+				
+                static init() 
+                {
+                    let draggableElement = "";
+                    let insertBeforeElement = "";
+                    App.applyEvents();
+                }
+
+                static applyEvents()
+                {
+                    let boxes = document.getElementsByClassName('box');
+					let holders = document.getElementsByClassName('holder');
+
+					for(const b of boxes)
+					{
+						b.addEventListener("dragstart", function(){App.dragstart(event,this);})
+                        b.addEventListener("dragend", function(){App.dragend(event);})
+                        // b.addEventListener("mouseenter", function(){App.mouseEnter(event);})
+					}
+
+                    for(const h of holders) 
+                    {
+                        h.addEventListener("dragover", function(){App.dragover(event, this);})
+                        h.addEventListener("dragenter", function(){App.dragenter(event, this);})
+                        h.addEventListener("dragleave", function(){App.dragleave(event, this);})
+                        h.addEventListener("drop", function(){App.drop(event,this)})
+                    }
+                }
+
+                // static mouseEnter(e,ref)
+                // {
+                //     console.log(e);
+                //     console.log("Hi"+ref);
+                // }
+
+                static dragstart(e, ref) 
+                {
+                    console.log(e);
+					//console.log(ref);
+					this.draggableElement = ref;
+					console.log(this.draggableElement);
+                }
+
+                static dragend(e) 
+                {
+                    console.log("end");
+                }
+
+                static dragover(e) 
+                {
+                    e.preventDefault();
+                    var target = e.target;
+
+                    if(this.draggableElement == e.target)
+                    {
+                        console.log("Over");
+                    }
+                    else
+                    {
+                        // console.log(target.className);
+                        this.insertBeforeElement = target;
+                        // console.log(this.insertBeforeElement);
+                    }
+                }
+
+                static dragenter(e) 
+                {
+                    e.preventDefault();
+                    console.log("enter");
+                    console.log(e.target);
+                }
+
+                static dragleave(e) 
+                {
+                    console.log("leave");
+                    console.log(e.target);
+                }
+
+                static drop(e, ref) 
+                {
+                    if(this.insertBeforeElement.className == 'holder')  // Empty container
+                    {
+                        ref.append(this.draggableElement);
+                    }
+                    else
+                    {
+                        ref.insertBefore(this.draggableElement, this.insertBeforeElement);
+                    }
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", App.init)
+        </script>
+    </body>
+</html>
