@@ -1,0 +1,25 @@
+{
+  "name": "html-css",
+  "version": "1.0.0",
+  "description": "Project describing the use of HTML, CSS, JS, Jquery",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.1.2",
+    "expect": "^23.4.0",
+    "redux": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OceanK007/html-css-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OceanK007/html-css-js/issues"
+  },
+  "homepage": "https://github.com/OceanK007/html-css-js#readme"
+}
