@@ -2,11 +2,25 @@ import {createStore} from 'redux';
 import {createHTMLElement} from './service';
 
 const htmlContent = 
-`<div class="container text-center">
-    <h1 id="counter">0</h1>
-    <button class="btn btn-primary" id="add">Increment</button>
-    <button class="btn btn-secondary" id="minus">Decrement</button>
-    <button class="btn btn-danger" id="reset">Reset</button>
+`<div class="container">
+    <div class="mt-2 d-flex flex-column col-md-5 mx-auto">
+        <input id="input" type="input" placeholder="Type title" class="py-2" />
+        <button id="button" class="btn btn-primary my-2 col-md-3">Submit</button>
+    </div>
+    <br>
+    <hr>
+    <div id="cards" class="mt-2 d-flex flex-column justify-content-center col-md-5 mx-auto">
+        
+    </div>
+</div>`;
+
+const card = 
+`<div class="my-card d-flex justify-content-between"> 
+    <div>
+        <input type="checkbox" class="" />
+        <span class="">Hello</span>
+    </div>
+    <button class="btn btn-danger">Delete</button>
 </div>`;
 
 //console.log(createElement());
@@ -19,16 +33,8 @@ function createElement()
     //console.log(element);
     
     // ACTIONS
-    element.querySelector('#add').addEventListener('click', function() {
-        store.dispatch({type: 'INCREMENT'});
-    })
-
-    element.querySelector('#minus').addEventListener('click', function() {
-        store.dispatch({type: 'DECREMENT'});
-    })
-
-    element.querySelector('#reset').addEventListener('click', function() {
-        store.dispatch({type: 'RESET'});
+    element.querySelector('#button').addEventListener('click', function() {
+        store.dispatch({type: 'ADD_CARD'});
     })
 
     return element;
@@ -39,22 +45,28 @@ function reducer(state, action)
 {
     switch(action.type)
     {
-        case 'INCREMENT':
+        case 'ADD_CARD':
             //console.log("Increment");
             state.count = state.count + 1;
             return state;
-        case 'DECREMENT':
+        case 'REMOVE_CARD':
             state.count = state.count - 1;
-            return state;
-        case 'RESET':
-            state.count = 0;
             return state;
         default:
             return state;
     }
 }
 
-var state = { count: 0 };
+var state = 
+{
+    "cards": 
+    [
+      {
+        "id": 1,
+        "title": "card1"
+      }   
+    ]
+};
 
 // STORE (Assigning reducer and state). It's not compulsory to provide "state"
 var store = createStore(reducer, state);
