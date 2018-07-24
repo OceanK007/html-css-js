@@ -4,3 +4,15 @@ export function createHTMLElement(htmlString)
     template.innerHTML = htmlString;
     return template.content.firstElementChild;
 }
+
+export function getLastElementId(parentContainerId)
+{
+    var lastElementId = 0;
+    var lastElement = document.getElementById(parentContainerId).lastElementChild;
+    if(lastElement != null)
+    {
+        lastElementId = lastElement.id;
+    }
+
+    return lastElementId;
+}
