@@ -43,14 +43,12 @@ const reducer = (state, action) =>
     {
         case 'INCREMENT':
             //console.log("Increment");
-            state.count = state.count + 1;
-            return state;
+            // We should never change the current state
+            return { count : state.count + 1};            
         case 'DECREMENT':
-            state.count = state.count - 1;
-            return state;
+            return { count : state.count - 1};
         case 'RESET':
-            state.count = 0;
-            return state;
+            return { count : 0 };
         default:
             return state;
     }
