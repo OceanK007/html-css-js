@@ -77,6 +77,7 @@ var stateArray = [];
 function reducer(state, action)
 {
     console.log(stateArray);
+    // Never override the current state, it will be required for undo operations
     switch(action.type)
     {
         case 'ADD_CARD':
