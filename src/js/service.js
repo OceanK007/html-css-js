@@ -7,17 +7,8 @@ export function createHTMLElement(htmlString)
     return template.content.firstElementChild;
 }
 
-export function getLastElementId(parentContainerId)
+export function getLastElementId()
 {
-    // var lastElementId = 0;
-    // var lastElement = document.getElementById(parentContainerId).lastElementChild;
-    // if(lastElement != null)
-    // {
-    //     lastElementId = lastElement.id;
-    // }
-
-    // return lastElementId;
-
     var data = getCards();
     var lastCardId = data.cards[data.cards.length-1].id;
     console.log(lastCardId);

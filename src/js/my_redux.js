@@ -14,9 +14,9 @@ export function createElement()
     
     element.querySelector('#button').addEventListener('click', function() 
     {
-        var lastCardId = getLastElementId('card-container');
+        var lastCardId = getLastElementId();
         var titleRef = document.getElementById('input');
-        // console.log(title);
+        // console.log(titleRef);
         if(titleRef.value == "")
         {
             alert("Please provide card title");
