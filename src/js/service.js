@@ -1,3 +1,5 @@
+import {getCards} from './dbcalls';
+
 export function createHTMLElement(htmlString) 
 {
     const template = document.createElement('template');
@@ -7,12 +9,17 @@ export function createHTMLElement(htmlString)
 
 export function getLastElementId(parentContainerId)
 {
-    var lastElementId = 0;
-    var lastElement = document.getElementById(parentContainerId).lastElementChild;
-    if(lastElement != null)
-    {
-        lastElementId = lastElement.id;
-    }
+    // var lastElementId = 0;
+    // var lastElement = document.getElementById(parentContainerId).lastElementChild;
+    // if(lastElement != null)
+    // {
+    //     lastElementId = lastElement.id;
+    // }
 
-    return lastElementId;
+    // return lastElementId;
+
+    var data = getCards();
+    var lastCardId = data.cards[data.cards.length-1].id;
+    console.log(lastCardId);
+    return lastCardId;
 }

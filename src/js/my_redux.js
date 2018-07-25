@@ -1,6 +1,6 @@
 import {createStore} from 'redux';
 import {createHTMLElement, getLastElementId} from './service';
-import {getData} from './dbcalls';
+import {getCards, saveCard, updateCard} from './dbcalls';
 import {htmlContent} from './view';
 
 //console.log(createElement());
@@ -22,9 +22,12 @@ export function createElement()
             alert("Please provide card title");
         }
         else
-        {
+        {            
+            var newState = {id:Number(lastCardId)+1, title:titleRef.value, isActive:true};
             // ACTIONS
-            store.dispatch({type: 'ADD_CARD', details: {id:Number(lastCardId)+1, title:titleRef.value}});
+            store.dispatch({type: 'ADD_CARD', details: newState});
+            // DB CALL
+            saveCard(newState);
         }   
         
         titleRef.value = "";
@@ -46,10 +49,15 @@ export function createCard(id, title)
     </div>`);
     //console.log(element);
     
-    element.querySelector('button').addEventListener('click', function() 
+    element.querySelector('button').addEventListener('click', function(event) 
     {
+        var cardId = event.target.parentNode.id;
+        console.log();    
+        var deleteState = {id:Number(cardId), isActive:false};
         // ACTIONS
-        store.dispatch({type: 'REMOVE_CARD'});
+        store.dispatch({type: 'REMOVE_CARD', details: deleteState});
+        // DB CALL
+        updateCard(deleteState);
     })
 
     return element;
@@ -67,7 +75,7 @@ export function createCard(id, title)
 //     ]
 // };
 
-var state = getData();
+var state = getCards();
 // console.log(state);
 
 // STATE ARRAY (FOR UNDO OPERATIONS)
@@ -76,47 +84,69 @@ var stateArray = [];
 // REDUCER
 function reducer(state, action)
 {
-    console.log(stateArray);
+    //console.log(stateArray);
+    //console.log(state);
+    //console.log(action);
     // Never override the current state, it will be required for undo operations
     switch(action.type)
     {
         case 'ADD_CARD':
             console.log("ADD_CARD");
-            //console.log(state);
-            //console.log(action);
-            if(state == null)
-            {
-                stateArray.push(state);
-                return {
-                    "cards": 
-                    [
-                        {
-                            "id":action.details.id,
-                            "title":action.details.title
-                        }
-                    ]
-                };
-            }
-            else
-            {
-                stateArray.push(state);
-                return {
-                    "cards": 
-                    [
-                        ...state.cards, 
-                        {
-                            "id":action.details.id,
-                            "title":action.details.title
-                        }
-                    ]
-                };
-            }
-        case 'REMOVE_CARD':
-            
-            return state;
+            return addCardReducer(state, action);
+
+        case 'REMOVE_CARD':            
+            console.log("REMOVE_CARD");
+            return removeCardReducer(state, action);
         default:
             return state;
     }
+}
+
+// ADD_CARD REDUCER
+function addCardReducer(state, action)
+{
+    if(state == null)
+    {
+        stateArray.push(state);
+        return {
+            "cards": 
+            [
+                {
+                    "id":action.details.id,
+                    "title":action.details.title,
+                    "isActive":action.details.isActive
+                }
+            ]
+        };
+    }
+    else
+    {
+        stateArray.push(state);
+        return {
+            "cards": 
+            [
+                ...state.cards, 
+                {
+                    "id":action.details.id,
+                    "title":action.details.title,
+                    "isActive":action.details.isActive
+                }
+            ]
+        };
+    }
+}
+
+function removeCardReducer(state, action)
+{
+    Array.from(state.cards).forEach(function(element) 
+    {
+        if(element.id == action.details.id)
+        {
+            element.isActive = false;
+        }
+    });
+
+    return state;
 }
 
 // STORE (Assigning reducer and state). It's not compulsory to provide "state"
@@ -126,17 +156,17 @@ var store = createStore(reducer, state);
 store.subscribe(render);    // Subscribing, so if state changes, it automatically renders on html
 function render()
 {
-    console.log("In Render");
-    //console.log(store.getState());    
+    console.log("In Render: "+store.getState());   
     renderCards(store.getState());
 }
 
 // CALLING RENDER TO FETCH INITIAL STATE
-render();
+render(store.getState());
 
 // *********************************************
-function renderCards(data)
+export function renderCards(data)
 {
+    //console.log(data);
     if(data == null)
         return null;
 
@@ -147,7 +177,10 @@ function renderCards(data)
     Array.from(data.cards).forEach(function(element) 
     {
         //console.log(element);
-        var card = createCard(element.id, element.title);
-        cardContainer.appendChild(card);
+        if(element.isActive == true)
+        {
+            var card = createCard(element.id, element.title);
+            cardContainer.appendChild(card);
+        }
     });
 }
