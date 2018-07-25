@@ -10,7 +10,6 @@ window.onload = function()
 {
     Service.hideCardList()
     BoardService.renderBoards();      // Rendering boards
-    console.log(boards);
     CardListService.addListenerToCardList();    
     CardListService.addListenersToCardListTitle();
 };
