@@ -11,7 +11,8 @@ Doing DOM manipulation using javascript
 1. npm run build    // It will create dist folder locally and you can share the files from there.
 
 
-
+# URL
+https://webpack.js.org/guides/getting-started/#basic-setup
 
 
 # Setup JSON server
@@ -27,9 +28,3 @@ Doing DOM manipulation using javascript
 		"profile": { "name": "typicode" }
     }
 3. json-server --watch db.json
-
-# Reference link
-https://trello.com
-
-# URL
-https://webpack.js.org/guides/getting-started/#basic-setup

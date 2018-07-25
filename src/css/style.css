@@ -6354,3 +6354,30 @@ a.text-dark:hover, a.text-dark:focus {
 
 .card-list-title {
   cursor: pointer; }
+
+.board-container {
+  background: #edeff0;
+  height: 100%; }
+
+.bd-highlight {
+  background-color: rgba(86, 61, 124, 0.15);
+  border: 1px solid rgba(86, 61, 124, 0.15);
+  margin: 5px; }
+
+.bd-highlight a {
+  text-decoration: none; }
+
+.board {
+  width: 200px;
+  height: 100px; }
+
+#board-create {
+  margin: 5px;
+  background-color: rgba(86, 61, 124, 0.15); }
+
+#board-input {
+  margin: 2px;
+  width: 185px; }
+
+#board-submit {
+  margin: 3px; }
