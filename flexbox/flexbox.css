@@ -69,10 +69,30 @@ header div
     justify-content:flex-end;
 }
 
+/* Section55 */
+.parent55
+{
+    /* justify-content: flex-start; */
+    justify-content:flex-start;
+}
+
+/* Section555 */
+.parent555
+{
+    /* justify-content: flex-start; */
+    justify-content:center;
+}
+
 /* Section6 */
 .parent6
 {
     justify-content: space-between;
+}
+
+/* Section66 */
+.parent66
+{
+    justify-content: space-around;
 }
 
 /* Section7 */
